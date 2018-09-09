@@ -12,14 +12,14 @@ package lectures.functions
 object Fibonacci extends App {
 
   // Task 2
-  def fibs(num: Int) :Int = {
+  def fibs(num: Int) = {
     if (num == 1) 1
-    else if (num == 2) 1
-    else fibs(num - 1) + fibs(num - 2)
+    if (num == 2) 1
+    //fibs(num - 1) + fibs(num - 2)
   }
 
   println(fibs(9))
-//  println(fibs(1000))
+  //println(fibs(1000))
 }
 
 /**
@@ -38,13 +38,10 @@ object Fibonacci2 extends App {
     if (num <= 3) Array(1, 1, 2)(num - 1)
     else fibsImpl(num, Array(1, 1, 2))(num - 1)
 
-  private def fibsImpl(num: Int, acc: Array[Int]): Array[Int] = {
-    if (acc.length==num) acc
-    else  fibsImpl(num, acc :+ acc(acc.length - 1) + acc(acc.length - 2))
-  }
+  private def fibsImpl(num: Int, acc: Array[Int]): Array[Int] = ???
 
   println(fibs2(16))
-//  println(fibs2(1000))
+  //println(fibs(1000))
 }
 
 
