@@ -45,7 +45,6 @@ object Fibonacci2 extends App {
 
   println(fibs2(16))
 //  println(fibs2(1000))
-
 }
 
 
